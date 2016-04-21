@@ -15,7 +15,7 @@
   <body>
     <!-- <img id="bkg_imge"src="Images/marble.jpg" alt="" /> -->
     <div class="container main_coming_soon">
-      <h1>Kymia</h1>
+      <h1>Kymia.</h1>
        <div class="row">
         <p>
           Ever dreamt of wearing a unique design printed on high quality apparel?
@@ -26,18 +26,16 @@
         <h3>Coming soon.</h3>
       </div>
       <!-- text field for email -->
-      <div class="row">
-        <div class="email">
-          <form>
-            <div class="group">
-              <input type="text" required>
-              <span class="highlight"></span>
-              <span class="bar"></span>
-              <label>Email</label>
-            </div>
-          </form>
-        </div>
+      <div class="row email_row">
+        <form role="form">
+          <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+        </form>
+        <button type="submit" class="btn btn-default">Submit</button>
       </div>
+
       <!-- end text field for email -->
     </div>
 
