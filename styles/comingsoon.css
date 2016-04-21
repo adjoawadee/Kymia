@@ -1,0 +1,40 @@
+html
+{
+  height: 100%;
+}
+body
+{
+  height: 100%;
+  background: url(../Images/marble.jpg);
+   background-size: 100% 100%;
+  width: 100%;
+    background-repeat: no-repeat;
+}
+
+/*coming soon page*/
+.main_coming_soon
+{
+	text-align: center;
+	vertical-align: center;
+	position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translateX(-50%) translateY(-50%);
+		 -ms-transform:translateX(-50%) translateY(-50%);
+		 -webkit-transform:translateX(-50%) translateY(-50%);
+		 -moz-transform:translateX(-50%) translateY(-50%);
+		 -o-transform:translateX(-50%) translateY(-50%);
+}
+
+.main_coming_soon h1
+{
+	font-family: LuxiaSB;
+	font-size: 60px;
+}
+
+.main_coming_soon h3
+{
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+/*End coming soon page*/

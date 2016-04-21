@@ -6,6 +6,28 @@ body{
 
   height: 100%;}
 
+/*costom font*/
+/*Credit: Andrew Herndon*/
+@font-face
+{
+	font-family: LuxiaSB;
+  src: url(font/Luxia-Semi-Bold.otf);
+
+	font-family: LuxiaSBD;
+	  src: url(font/Luxia-Semi-BoldDisplay.otf);
+}
+
+/*Credit: https://drive.google.com/file/d/0B_LOCzPvsrVneGl2cjNIcWRjcUE/view*/
+@font-face
+{
+	font-family: IkarosL;
+	src: url(font/Ikaros-Light.otf);
+
+	font-family: IkarosR;
+	src: url(font/Ikaros-Regular.otf);
+
+}
+
 .top-buffer{
   margin-top:10px;
 }
@@ -17,7 +39,6 @@ body{
   margin: 0 auto;
   margin-top: 20px;
 }
-
 
 
 /*home section*/
