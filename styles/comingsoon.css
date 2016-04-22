@@ -10,7 +10,6 @@ body
   width: 100%;
     background-repeat: no-repeat;
 }
-
 /*coming soon page*/
 .main_coming_soon
 {
@@ -25,13 +24,11 @@ body
 		 -moz-transform:translateX(-50%) translateY(-50%);
 		 -o-transform:translateX(-50%) translateY(-50%);
 }
-
 .main_coming_soon h1
 {
 	font-family: LuxiaSB;
 	font-size: 60px;
 }
-
 .main_coming_soon h3
 {
 	font-family: 'Lato', sans-serif;

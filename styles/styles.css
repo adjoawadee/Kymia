@@ -16,7 +16,22 @@ body{
 	font-family: LuxiaSBD;
 	  src: url(font/Luxia-Semi-BoldDisplay.otf);
 }
+/*Styleing send button*/
 
+.btn {
+    padding: 14px 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+		background: none;
+}
+.btn.outline {
+	background: none;
+	padding: 12px 22px;
+	border: 4;
+}
+
+/*End Styling send button*/
 /*Credit: https://drive.google.com/file/d/0B_LOCzPvsrVneGl2cjNIcWRjcUE/view*/
 @font-face
 {
