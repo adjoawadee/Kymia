@@ -18,20 +18,49 @@
     <!--custom js script-->
     <script type="text/javascript" src="js/script.js"></script>
     <!--section-->
-    <section id="home_page">
-      <div class="women-section">
-        <a href="womenSection.html"><img src="Images/tshirt.jpg" id="women_bkg" alt="" /></a>
+    <section class="container-fluid home_container">
+      <!-- start women row -->
+      <div class="row women_row">
         <div class="container">
-          <h2>Women</h2>
+          <!-- women logo -->
+          <div class="col-sm-5 col-xs-12">
+            <img id="woman_logo"src="Images/women_logo.png"alt="" />
+          </div>
+          <!-- end logo -->
+          <!-- shop now  -->
+          <div class="col-sm-5 col-xs-12" id="shop_now_women">
+            <a href="womenSection.html"><button type="button" class="shop_now_btn btn btn-default">Shop women</button></a>
+          </div>
+          <!-- end shop now -->
+          <!-- woman image -->
+          <div class="col-sm-2 col-xs-12">
+              <img id="woman_image"src="Images/woman_image.png" alt="" />
+          </div>
+          <!-- end woman image  -->
         </div>
       </div>
-      <div class="men-section">
-        <a href="menSection.html">  <img src="Images/tshirtw.jpg" id="men_bkg" alt="" /></a>
-        <!-- <div class="container">
-          <h2>Men</h2>
-        </div> -->
-      </div>
+      <!--  end women row-->
 
+      <!-- start men row -->
+      <div class="row men_row">
+        <div class="container div_center">
+          <div class="col-sm-5 col-xs-12">
+              <img id="man_logo" src="Images/men_logo.png" alt="" />
+          </div>
+            <!-- shop now  -->
+            <div class="col-sm-5 col-xs-12" id="shop_now_men">
+              <a href="menSection.html"><button type="button" class="shop_now_btn shop_now_btn_men btn btn-default">Shop men</button></a>
+            </div>
+            <!-- end shop now -->
+            <!-- man image -->
+            <div class="col-sm-2 col-xs-12">
+                <img id="man_image"src="Images/men_image.png" alt="" />
+            </div>
+            <!-- end man image  -->
+        </div>
+      </div>
+      <!-- end men row -->
     </section>
+    <!-- end section  -->
   </body>
 </html>

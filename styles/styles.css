@@ -1,9 +1,7 @@
 html {
 	height:100%;
-
 }
 body{
-
   height: 100%;}
 
 /*costom font*/
@@ -24,7 +22,7 @@ body{
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-		background: none; 
+		background: none;
 }
 /*End Styling send button*/
 /*Credit: https://drive.google.com/file/d/0B_LOCzPvsrVneGl2cjNIcWRjcUE/view*/
@@ -38,6 +36,11 @@ body{
 
 }
 
+h2
+{
+	font-family: LuxiaSB;
+	font-size: 50px;
+}
 .top-buffer{
   margin-top:10px;
 }
@@ -53,8 +56,9 @@ body{
 
 /*home section*/
 .home_container{
-  padding-left: 0;
-  padding-right: 0;
+	display: flex;
+ 	flex-direction: column;
+ 	height: 100%;
 }
 
 
@@ -64,28 +68,69 @@ body{
   padding-right: 0;
 }
 
-
-#women_bkg
+.div_center
 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  z-index: -10;
-}
-
-.women-section
-{
-
-}
-
-#men_bkg
-{
-  position: absolute;
+	position: relative;
   top: 50%;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  z-index: -10;
+  transform: translateY(-50%);
+}
+
+/*Shop now button*/
+
+.shop_now_btn
+{
+		padding: 14px 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform:uppercase;
+    background: none;
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+		font-size: 15px;
+		border-color:  #2b2b2b;
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 0;
+		border-top: 0;
+		border-bottom: 0;
+	}
+
+
+/*Women row*/
+.women_row
+{
+	background: url(../Images/tshirt.jpg);
+	background-size: cover;
+	height: 50%;
+}
+
+#woman_logo
+{
+	padding-top: 30%;
+}
+#shop_now_women
+{
+	padding-top: 15%;
+}
+/*Men row*/
+.men_row
+{
+	background: url(../Images/tshirtw.jpg);
+		background-size: cover;
+	height: 50%;
+}
+#shop_now_men
+{
+	padding-top: 10%;
+}
+
+#man_logo
+{
+	padding-top: 20%;
+}
+
+.shop_now_btn_men
+{
+	padding-left: 40px;
+	padding-right: 40px;
 }
