@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "images/television.jpg",
+      "title": "Television",
+      "price": 50
+    },
+    {
+      "id": 2,
+      "image": "images/tshirt.jpg",
+      "title": "T-shirt",
+      "price": 15
+    },
+    {
+      "id": 3,
+      "image": "images/laptop.jpg",
+      "title": "Macbook Laptop",
+      "price": 80
+    },
+    {
+      "id": 4,
+      "image": "images/mouse.jpg",
+      "title": "Computer Mouse",
+      "price": 5
+    },
+    {
+      "id": 5,
+      "image": "images/tea.jpg",
+      "title": "Electric Tea Kettle",
+      "price": 11
+    },
+    {
+      "id": 6,
+      "image": "images/nikes.jpg",
+      "title": "Used Nikes ",
+      "price": 18
+    }
+  ]
+}
