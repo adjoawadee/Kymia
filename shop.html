@@ -3,110 +3,147 @@
 <head>
     <meta charset="utf-8"/>
     <title>Shop</title>
-    <link rel="stylesheet" href="styles/shopnav.css">
-    <link rel="stylesheet" href="styles/shopstyles.css">
     <!--bootstrap css-->
     <link rel="stylesheet" href="styles/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+
+    <link rel="stylesheet" href="styles/shopnav.css">
+    <link rel="stylesheet" href="styles/shopstyles.css">
 </head>
 
-<body  ng-controller="ShopCtrl">
+<body ng-controller="ShopCtrl">
 <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="mainpage.html">Kymia.</a>
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="mainpage.html">Kymia.</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="nav-no-boder collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">shop<span class="sr-only">(current)</span></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="mainpage.html">home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Cart <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div class="container shop_picker">
+    <div class="row picker_row">
+        <div class="col-md-3 picker_options">
+            <div class="inner">
+                <p class="description">
+                    {{currentDesign.name}}
+                </p>
             </div>
+            <button class="btn btn-default pull-left" ng-click="designPrevious()"><</button>
+            <button class="btn btn-default pull-right" ng-click="designNext()">></button>
+        </div>
+        <div class="col-md-3 picker_options">
+            <div class="inner">
+                <p>Color: {{currentColor.value}}</p>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="nav-no-boder collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">shop<span class="sr-only">(current)</span></a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="mainpage.html">home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cart <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+                <div class="btn-group" data-toggle="buttons">
+                    <label style="background-color: #212121" class="btn btn-default custom-radio-color active"
+                           ng-click="colorBlack()">
+                        <input type="radio" checked autocomplete="off">
+                    </label>
+                    <label style="background-color: #ffffff" class="btn btn-default custom-radio-color"
+                           ng-click="colorWhite()">
+                        <input type="radio" autocomplete="off">
+                    </label>
+                </div>
+                <br><br>
 
-    <div class="container shop_picker">
-        <div class="row picker_row">
-            <div class="col-md-3 picker_options">
-                <div class="inner">
-                    <p class="description">
-                        Fancy a design
-                    </p>
+                <p>Size: {{currentSize.size}}</p>
 
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-default custom-radio-size active" ng-click="sizeXS()">XS
+                        <input type="radio" checked autocomplete="off">
+                    </label>
+                    <label class="btn btn-default custom-radio-size" ng-click="sizeS()">S
+                        <input type="radio" autocomplete="off">
+                    </label>
+                    <label class="btn btn-default custom-radio-size" ng-click="sizeM()">M
+                        <input type="radio" autocomplete="off">
+                    </label>
+                    <label class="btn btn-default custom-radio-size" ng-click="sizeL()">L
+                        <input type="radio" autocomplete="off">
+                    </label>
                 </div>
             </div>
-            <div class="col-md-3 picker_options">
-                <div class="inner">
-                    <p class="description">
-                        How about a t-shirt?
-                    </p>
-                </div>
-                <form action="">
-                    <p>Color:</p>
-                    <div class="col-sm-6"><input type="radio" name="color" value="black"> Black<br></div>
-                    <div class="col-sm-6"><input type="radio" name="color" value="white"> White<br></div>
-                </form>
-                <form action="">
-                    <p>Size:</p>
-                    <div class="col-sm-6"><input type="radio" name="size" value="XS"> XS<br></div>
-                    <div class="col-sm-6"><input type="radio" name="size" value="S"> S<br></div>
-                    <div class="col-sm-6"><input type="radio" name="size" value="M"> M<br></div>
-                    <div class="col-sm-6"><input type="radio" name="size" value="L"> L<br></div>
-                </form>
+        </div>
+        <div class="col-md-3 picker_options">
+            <div class="inner">
+                <p class="description">
+                    {{currentShirt.type}}
+                </p>
             </div>
-            <div class="col-md-3 picker_options">
-                <div class="inner">
-                    <p class="description">
-                        Where do you want
-                        <br>
-                        to place your design?
-                    </p>
-                </div>
+            <button class="btn btn-default pull-left" ng-click="shirtPrevious()"><</button>
+            <button class="btn btn-default pull-right" ng-click="shirtNext()">></button>
+        </div>
+        <div class="col-md-3 picker_options">
+            <div class="inner">
+                <p class="description">
+                    {{currentPlacement.name}}
+                </p>
             </div>
-            <div class="col-md-3 picker_options">
-                <div class="inner">
-                    <p class="description">
-                        Your unique t-shirt!!
-                    </p>
-                </div>
-                <input type="button" class="checkout" value="checkout">
-
-            </div>
+            <button class="btn btn-default pull-left" ng-click="placementPrevious()"><</button>
+            <button class="btn btn-default pull-right" ng-click="placementNext()">></button>
         </div>
     </div>
 
+    <!-- Preview -->
+    <div class="row picker_row">
+        <div class="col-md-4 col-md-offset-4 picker_options">
+            <div class="inner">
+                <p class="description">
+                    PREVIEW THE "ALL TOGETHER" UNIQUE SHIRT
+                </p>
+            </div>
+            <input type="button" class="checkout" value="Add to car?">
 
-<!--Scripts-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <input type="button" class="checkout" value="checkout">
+        </div>
+    </div>
 
-<!-- Angular -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular-animate.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+    <!--Scripts-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<!-- our code -->
-<script type="text/javascript" src="js/ui-bootstrap-tpls-1.2.5.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-cookies.min.js"></script>
-<script src="js/app.js"></script>
-<!--End Scripts-->
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular-animate.min.js"></script>
+    <script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+
+    <!-- our code -->
+    <script type="text/javascript" src="js/ui-bootstrap-tpls-1.2.5.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-cookies.min.js"></script>
+
+    <script src="angular/app.js"></script>
+    <script src="angular/factory.js"></script>
+    <script src="angular/controller-shop.js"></script>
+    <!--End Scripts-->
 
 </body>
 </html>

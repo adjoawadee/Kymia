@@ -2,7 +2,6 @@
 {
     margin-top: 50px;
     /*background-color: white;*/
-
 }
 
 .picker_options .inner
@@ -38,8 +37,13 @@ input.checkout
     transition: all 250ms ease-out;
 }
 
-form
-{
-    margin-top: 10px;
+.custom-radio-color {
+    border-radius: 0;
+    padding: 15px 30px;
+    border: 2px solid #ccc;
 }
 
+.custom-radio-size {
+    border-radius: 0;
+    border: 2px solid #ccc;
+}

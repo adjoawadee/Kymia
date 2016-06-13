@@ -1,16 +1,16 @@
 [
   {
-    "name": "neck",
+    "name": "Neck",
     "image": "images/neck.jpg",
     "price": 10.60
   },
   {
-    "name": "left arm",
+    "name": "Left Arm",
     "image": "images/leftarm.jpg",
     "price": 7.50
   },
   {
-    "name": "right arm",
+    "name": "Right Arm",
     "image": "images/rightarm.jpg",
     "price": 7.50
   }

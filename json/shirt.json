@@ -1,10 +1,10 @@
 [
   {
-    "type": "v neck",
+    "type": "V Neck",
     "image": "image/vneck.jpg"
   },
   {
-    "type": "open",
+    "type": "Open Neck",
     "image": "image/open.jpg"
   }
 ]

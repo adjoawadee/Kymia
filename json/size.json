@@ -1,14 +1,14 @@
 [
   {
-    "size": "xs"
+    "size": "Extra Small"
   },
   {
-    "size": "s"
+    "size": "Small"
   },
   {
-    "size": "m"
+    "size": "Medium"
   },
   {
-    "size": "l"
+    "size": "Large"
   }
 ]
