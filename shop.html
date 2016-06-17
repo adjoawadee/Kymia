@@ -144,12 +144,15 @@
                     {{preview.size.size}} <br>
                     {{preview.shirt.type}} <br>
 
-                <p class="description" ng-if="currentShirt.id == 1">
-                    {{preview.placement.image[1]}}
-                </p>
-                <p class="description" ng-if="currentShirt.id == 2">
-                    {{preview.placement.image[2]}}
-                </p>
+                <!--<p class="description" >-->
+                    <!--{{preview.placement.image[1]}}-->
+                <!--</p>-->
+
+                <img  ng-if="currentShirt.id == 1" class="img-responsive" src="{{preview.placement.image[1]}}" alt="">
+                <!--<p class="description" ng-if="currentShirt.id == 2">-->
+                    <!--{{preview.placement.image[2]}}-->
+                <!--</p>-->
+                <img   ng-if="currentShirt.id == 2" class="img-responsive"  src="{{preview.placement.image[2]}}" alt="">
 
                 <br><br>
 
