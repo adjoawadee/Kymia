@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "Neck",
     "image": {
       "1": "tshirts/vneck-neck.jpg",
@@ -8,6 +9,7 @@
     "price": 10.60
   },
   {
+    "id": 2,
     "name": "Left Arm",
     "image": {
       "1": "tshirts/vneck-leftarm.jpg",
@@ -16,6 +18,7 @@
     "price": 7.58
   },
   {
+    "id": 3,
     "name": "Right Arm",
     "image": {
       "1": "tshirts/vneck-rightarm.jpg",
@@ -24,6 +27,7 @@
     "price": 7.58
   },
   {
+    "id": 4,
     "name": "Front",
     "image": {
       "1": "tshirts/vneck-front.jpg",
