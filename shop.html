@@ -51,7 +51,7 @@
         <div class="col-md-3 picker_options">
             <div class="inner">
                 <p class="description">
-                    {{currentDesign.name}}
+                    <img class="img-responsive" ng-src = "{{currentDesign.image}}" alt="">
                 </p>
             </div>
             <button class="btn btn-default pull-left" ng-click="designPrevious()"><</button>
@@ -94,7 +94,7 @@
         <div class="col-md-3 picker_options">
             <div class="inner">
                 <p class="description">
-                    {{currentShirt.type}}
+                    <img style="height: 90%; width: 90%; display: block;" class="img-responsive" ng-src = "{{currentShirt.image}}" alt="">
                 </p>
             </div>
             <button class="btn btn-default pull-left" ng-click="shirtPrevious()"><</button>
@@ -103,7 +103,8 @@
         <div class="col-md-3 picker_options">
             <div class="inner">
                 <p class="description">
-                    {{currentPlacement.name}}
+                    <img style="height: 90%; width: 90%; display: block;" class="img-responsive" ng-src = "{{currentPlacement.image}}" alt="">
+
                 </p>
             </div>
             <button class="btn btn-default pull-left" ng-click="placementPrevious()"><</button>

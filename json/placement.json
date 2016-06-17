@@ -1,17 +1,42 @@
 [
   {
-    "name": "Neck",
-    "image": "images/neck.jpg",
+    "name": "Roundneck Neck",
+    "image": "tshirts/roundneck-neck.jpg",
     "price": 10.60
   },
   {
-    "name": "Left Arm",
-    "image": "images/leftarm.jpg",
-    "price": 7.50
+    "name": "Roundneck Front",
+    "image": "tshirts/roundneck-front.jpg",
+    "price": 10.60
   },
   {
-    "name": "Right Arm",
-    "image": "images/rightarm.jpg",
-    "price": 7.50
+    "name": "Roundneck Left Arm",
+    "image": "tshirts/roundneck-leftarm.jpg",
+    "price": 10.60
+  },
+  {
+    "name": "Roundneck Right Arm",
+    "image": "tshirts/roundneck-rightarm.jpg",
+    "price": 10.60
+  },
+  {
+    "name": "Vneck Neck",
+    "image": "tshirts/vneck-neck.jpg",
+    "price": 10.60
+  },
+  {
+    "name": "vneck Front",
+    "image": "tshirts/vneck-front.jpg",
+    "price": 10.60
+  },
+  {
+    "name": "vneck Left Arm",
+    "image": "tshirts/vneck-leftarm.jpg",
+    "price": 10.60
+  },
+  {
+    "name": "vneck Right Arm",
+    "image": "tshirts/vneck-rightarm.jpg",
+    "price": 10.60
   }
 ]
