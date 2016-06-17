@@ -52,3 +52,14 @@ app.factory('getSize', function ($http) {
         }
     };
 });
+
+app.factory('getPreview', function ($http) {
+    return {
+        async: function () {
+            //$http returns a promise, which has a then function, which also returns a promise
+            return $http.get("json/preview.json").then(function (response) {
+                return response.data;
+            });
+        }
+    };
+});
