@@ -1,17 +1,26 @@
 [
   {
     "name": "Neck",
-    "image": "images/neck.jpg",
+    "image": {
+      "1": "V - images/neck.jpg",
+      "2": "O - images/neck.jpg"
+    },
     "price": 10.60
   },
   {
     "name": "Left Arm",
-    "image": "images/leftarm.jpg",
-    "price": 7.50
+    "image": {
+      "1": "V - images/leftarm.jpg",
+      "2": "O - images/leftarm.jpg"
+    },
+    "price": 7.58
   },
   {
     "name": "Right Arm",
-    "image": "images/rightarm.jpg",
-    "price": 7.50
+    "image": {
+      "1": "V - images/rightarm.jpg",
+      "2": "O - images/rightarm.jpg"
+    },
+    "price": 7.58
   }
 ]

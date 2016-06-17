@@ -10,7 +10,6 @@ app.controller('ShopCtrl', function ($scope, $http, getColor, getDesign, getPlac
                         /**
                          * Arrays
                          */
-                        $scope.cart = [];
                         $scope.design = respDesign;
                         $scope.color = respColor;
                         $scope.placement = respPlacement;
@@ -25,6 +24,17 @@ app.controller('ShopCtrl', function ($scope, $http, getColor, getDesign, getPlac
                         $scope.currentPlacement = $scope.placement[0];
                         $scope.currentShirt = $scope.shirt[0];
                         $scope.currentSize = $scope.size[0];
+
+                        $scope.cart = null;
+
+                        $scope.preview =
+                            {
+                                "design": $scope.currentDesign,
+                                "color": $scope.currentColor,
+                                "placement": $scope.currentPlacement,
+                                "size": $scope.currentSize,
+                                "shirt": $scope.currentShirt
+                            };
 
                         /**
                          * Buttons
@@ -41,6 +51,8 @@ app.controller('ShopCtrl', function ($scope, $http, getColor, getDesign, getPlac
                                     $scope.currentDesign = $scope.design[0];
                                 }
                             }
+
+                            $scope.preview.design = $scope.currentDesign;
                         };
 
                         $scope.designPrevious = function () {
@@ -54,6 +66,8 @@ app.controller('ShopCtrl', function ($scope, $http, getColor, getDesign, getPlac
                                     $scope.currentDesign = $scope.design[arraySize - 1];
                                 }
                             }
+
+                            $scope.preview.design = $scope.currentDesign;
                         };
 
                         $scope.shirtNext = function () {
@@ -67,6 +81,8 @@ app.controller('ShopCtrl', function ($scope, $http, getColor, getDesign, getPlac
                                     $scope.currentShirt = $scope.shirt[0];
                                 }
                             }
+
+                            $scope.preview.shirt = $scope.currentShirt;
                         };
 
                         $scope.shirtPrevious = function () {
@@ -80,6 +96,8 @@ app.controller('ShopCtrl', function ($scope, $http, getColor, getDesign, getPlac
                                     $scope.currentShirt = $scope.shirt[arraySize - 1];
                                 }
                             }
+
+                            $scope.preview.shirt = $scope.currentShirt;
                         };
 
                         $scope.placementNext = function () {
@@ -93,6 +111,8 @@ app.controller('ShopCtrl', function ($scope, $http, getColor, getDesign, getPlac
                                     $scope.currentPlacement = $scope.placement[0];
                                 }
                             }
+
+                            $scope.preview.placement = $scope.currentPlacement;
                         };
 
                         $scope.placementPrevious = function () {
@@ -106,36 +126,48 @@ app.controller('ShopCtrl', function ($scope, $http, getColor, getDesign, getPlac
                                     $scope.currentPlacement = $scope.placement[arraySize - 1];
                                 }
                             }
+
+                            $scope.preview.placement = $scope.currentPlacement;
                         };
 
                         $scope.colorBlack = function () {
                             //For now only 2 colors
                             $scope.currentColor = $scope.color[0];
+                            $scope.preview.color = $scope.currentColor;
                         };
 
                         $scope.colorWhite = function () {
                             //For now only 2 colors
                             $scope.currentColor = $scope.color[1];
+                            $scope.preview.color = $scope.currentColor;
                         };
 
                         $scope.sizeXS = function () {
                             //For now only 4 sizes
                             $scope.currentSize = $scope.size[0];
+                            $scope.preview.size = $scope.currentSize;
                         };
 
                         $scope.sizeS = function () {
                             //For now only 4 sizes
                             $scope.currentSize = $scope.size[1];
+                            $scope.preview.size = $scope.currentSize;
                         };
 
                         $scope.sizeM = function () {
                             //For now only 4 sizes
                             $scope.currentSize = $scope.size[2];
+                            $scope.preview.size = $scope.currentSize;
                         };
 
                         $scope.sizeL = function () {
                             //For now only 4 sizes
                             $scope.currentSize = $scope.size[3];
+                            $scope.preview.size = $scope.currentSize;
+                        };
+
+                        $scope.checkout = function () {
+                            console.log($scope.preview);
                         };
 
                         /**

@@ -1,9 +1,11 @@
 [
   {
+    "id": 1,
     "type": "V Neck",
     "image": "image/vneck.jpg"
   },
   {
+    "id": 2,
     "type": "Open Neck",
     "image": "image/open.jpg"
   }

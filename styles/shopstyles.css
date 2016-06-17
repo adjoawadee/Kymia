@@ -1,49 +1,62 @@
-.shop_picker
-{
-    margin-top: 50px;
-    /*background-color: white;*/
+/* cart icon number */
+#cart-count {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    font-size: 10px;
+    background: #1279ff;
+    color: #fff;
+    /*margin-left: -10px;*/
+    padding: 0 5px;
+    vertical-align: top;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
 }
 
-.picker_options .inner
-{
+.shop_picker {
+    margin-top: 50px;
+}
+
+.shop_picker .btn {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.picker_options {
+    margin-bottom: 100px;
+}
+
+.picker_options .inner {
     background-color: white;
     padding: 10px;
-    height:300px;
+    height: 300px;
+    margin-bottom: 5px;
 }
 
-.description
-{
+.description {
     text-align: center;
-}
-
-.inner input
-{
-    display: inline;
-}
-
-input.checkout
-{
-    margin-top: 10px;
-    position: relative;
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    color: #000;
-    text-align: center;
-    text-decoration: none;
-    transform-style: flat;
-    transition: all 250ms ease-out;
 }
 
 .custom-radio-color {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
     border-radius: 0;
     padding: 15px 30px;
-    border: 2px solid #ccc;
 }
 
 .custom-radio-size {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
     border-radius: 0;
+}
+
+.custom-radio-size, .custom-radio-color {
     border: 2px solid #ccc;
+    margin: 0 5px;
+}
+
+.custom-radio-size.active, .custom-radio-color.active {
+    border: 2px solid #087600;
 }
