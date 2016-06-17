@@ -2,11 +2,11 @@
   {
     "id": 1,
     "type": "V Neck",
-    "image": "image/vneck.jpg"
+    "image": "tshirts/vneck.jpg"
   },
   {
     "id": 2,
     "type": "Open Neck",
-    "image": "image/open.jpg"
+    "image": "tshirts/roundneck.jpg"
   }
 ]

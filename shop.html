@@ -54,7 +54,7 @@
         <div class="col-xs-12 col-md-3 picker_options">
             <div class="inner">
                 <p class="description">
-                    {{currentDesign.name}}
+                    <img class="img-responsive" ng-src = "{{currentDesign.image}}" alt="">
                 </p>
             </div>
             <div class="col-xs-6">
@@ -103,7 +103,7 @@
         <div class="col-xs-12 col-md-3 picker_options">
             <div class="inner">
                 <p class="description">
-                    {{currentShirt.type}}
+                    <img style="height: 90%; width: 90%; display: block;" class="img-responsive" ng-src = "{{currentShirt.image}}" alt="">
                 </p>
             </div>
             <div class="col-xs-6">
@@ -118,10 +118,10 @@
         <div class="col-xs-12 col-md-3 picker_options">
             <div class="inner">
                 <p class="description" ng-if="currentShirt.id == 1">
-                    {{currentPlacement.image[1]}}
+                    <img style="height: 90%; width: 90%; display: block;" class="img-responsive" ng-src = "{{currentPlacement.image[1]}}" alt="">
                 </p>
                 <p class="description" ng-if="currentShirt.id == 2">
-                    {{currentPlacement.image[2]}}
+                    <img style="height: 90%; width: 90%; display: block;" class="img-responsive" ng-src = "{{currentPlacement.image[2]}}" alt="">
                 </p>
             </div>
             <div class="col-xs-6">
