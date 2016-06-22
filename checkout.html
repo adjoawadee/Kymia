@@ -1,23 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="kymiaShopApp">
 <head>
-    <meta charset="utf-8">
-    <title>Kymia [Checkout]</title>
+    <meta charset="utf-8"/>
+    <base href="/">
+    <title>Kymia. [Checkout]</title>
     <!--bootstrap css-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.css" media="screen" title="no title" charset="utf-8">
 
-    <!--styles css-->
-    <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="styles/shopnav.css">
+    <link rel="stylesheet" href="styles/shopstyles.css">
+    <!--<link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">-->
     <link rel="stylesheet" href="styles/comingsoon.css" media="screen" title="no title" charset="utf-8">
-
-    <!-- font -->
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/checkout.css" media="screen" title="no title" charset="utf-8">
 </head>
-<body>
-<!-- <img id="bkg_imge"src="Images/marble.jpg" alt="" /> -->
-<div class="container main_coming_soon">
-    <h1>Thank you for your order</h1>
+
+<body ng-controller="CheckoutCtrl">
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="" class="navbar-brand" ng-click="home()">Kymia.</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="nav-no-boder collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class=""><a href="" ng-click="shop()">Shop<span class="sr-only"></span></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="" ng-click="home()">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="cart-class dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><span class="glyphicon glyphicon-shopping-cart"></span> Cart
+                        <span class=""></span><label class="hidden-xs" id="cart-count">1</label></a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+    <div class="row main-checkout">
+        <div class="col-xs-12 well well-lg">
+            <div class="col-xs-4">
+                <img ng-src="{{preview}}" class="img-responsive">
+            </div>
+            <div class="col-xs-8">
+                <ul>
+                    <li>Color: {{color}}</li>
+                    <li>Size: {{size}}</li>
+                    <li>Type: {{type}}</li>
+                    <li>Position: {{position}}</li>
+                    <li>Price: {{price | currency:'€'}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <button style="border-radius: 0;" class="btn btn-block btn-default">Checkout</button>
+        </div>
+    </div>
 </div>
+
+<!--Scripts-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+
+<!-- Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.0/angular-animate.min.js"></script>
+<script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js"></script>
+
+<!-- our code -->
+<script type="text/javascript" src="js/ui-bootstrap-tpls-1.2.5.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap-tpls.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-cookies.min.js"></script>
+
+<script src="angular/app.js"></script>
+<script src="angular/factory.js"></script>
+<script src="angular/controller-checkout.js"></script>
+<!--End Scripts-->
 
 </body>
 </html>

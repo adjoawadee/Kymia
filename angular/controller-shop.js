@@ -1,7 +1,7 @@
 /**
  * Shop Controller
  */
-app.controller('ShopCtrl', function ($scope, $http, getColor, getDesign, getPlacement, getShirt, getSize, getPreview) {
+app.controller('ShopCtrl', function ($window, $location, $scope, $http, getColor, getDesign, getPlacement, getShirt, getSize, getPreview) {
     getColor.async().then(function (respColor) {
         getDesign.async().then(function (respDesign) {
             getPlacement.async().then(function (respPlacement) {
@@ -27,8 +27,6 @@ app.controller('ShopCtrl', function ($scope, $http, getColor, getDesign, getPlac
                             $scope.currentSize = $scope.size[0];
 
                             $scope.currentPreview = getPreview();
-
-                            $scope.cart = null;
 
                             $scope.preview =
                             {
@@ -176,7 +174,17 @@ app.controller('ShopCtrl', function ($scope, $http, getColor, getDesign, getPlac
                             };
 
                             $scope.checkout = function () {
-                                console.log($scope.preview);
+                                var url = "/checkout.html";
+                                var data = "?design=" + $scope.currentDesign.name;
+                                data = data + "&color=" + $scope.currentColor.value;
+                                data = data + "&size=" + $scope.currentSize.size;
+                                data = data + "&type=" + $scope.currentShirt.type;
+                                data = data + "&position=" + $scope.currentPlacement.name;
+                                data = data + "&id=" + getPreview();
+                                data = data + "&price=" + ($scope.preview.design.price +
+                                    $scope.preview.placement.price);
+
+                                $window.location.href = url + data;
                             };
 
                             /**
@@ -214,6 +222,19 @@ app.controller('ShopCtrl', function ($scope, $http, getColor, getDesign, getPlac
                                 }
                                 return "";
                             }
+
+
+                            /**
+                             * Navigation Button functions
+                             */
+
+                            $scope.home = function() {
+                                $window.location.href = "/mainpage.html";
+                            };
+
+                            $scope.shop = function() {
+                                $window.location.href = "/shop.html";
+                            };
                         });
                     });
                 });
