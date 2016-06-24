@@ -16,6 +16,13 @@ body{
 }
 /*Styleing send button*/
 
+#woman_logo
+{
+	display: inline;
+	height: 50%;
+	width: 50%;
+}
+
 .btn {
     padding: 14px 24px;
     border: 0 none;
