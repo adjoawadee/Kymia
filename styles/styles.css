@@ -16,11 +16,12 @@ body{
 }
 /*Styleing send button*/
 
-#woman_logo
+#woman_image
 {
 	display: inline;
-	height: 50%;
-	width: 50%;
+	height: 110%;
+	width: 120%;
+	margin-top: 5%;
 }
 
 .btn {
